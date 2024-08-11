@@ -1,0 +1,16 @@
+# Define pairs of patterns and responses for the chatbot
+pairs = [
+    (r"hi|hello|hey", ["Hello!", "Hi there!"]),
+    (r"how are you", ["I'm good, thank you.", "Feeling great!"]),
+    (r"what is your name", ["I'm a chatbot created with Python!"]),
+    (r"quit", ["Bye, take care!"]),
+]
+
+# Start the conversation
+print("Welcome! Start chatting with the chatbot. Type 'quit' to exit.")
+while True:
+    user_input = input("You: ")
+    response = chatbot.respond(user_input)
+    print("Chatbot:", response)
+    if user_input.lower() == 'quit':
+        break
